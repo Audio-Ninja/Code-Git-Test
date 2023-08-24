@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+</head>
+ 
+<body style="text-align:center;" id="body">
+    <h1>Enter Your Color Choice</h1>
+ 
+    <button type="button" onclick="changecolor()">
+        Color
+    </button>
+ 
+    <script>
+        function changecolor() {
+            // Generating random color each time
+            let color = "#" + (Math.random() * 16777215 | 0).toString(16);
+ 
+            $("body").css("background-color", color);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Enter Your Name</h1>
+ 
+    <input id="name" type="text">
+    <button type="button" onclick="EnterName()">Submit</button>
+    <p style="color:green" id="demo"></p>
+ 
+ 
+    <script>
+        function EnterName() {
+            let x = document.getElementById("name").value;
+ 
+            document.getElementById("demo").innerHTML =
+                "Welcome to Geeks For Geeks " + x;
+        }
+    </script>
+</body>
+</html>
