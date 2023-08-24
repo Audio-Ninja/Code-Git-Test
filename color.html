@@ -7,12 +7,10 @@
 </head>
  
 <body style="text-align:center;" id="body">
-    <h1>Enter Your Color Choice</h1>
+    <h1>Click to Change the Background Color</h1>
  
-    <button type="button" onclick="changecolor()">
-        Color
-    </button>
- 
+    <button type="button" onclick="changecolor()">Switch</button>
+
     <script>
         function changecolor() {
             // Generating random color each time
@@ -21,5 +19,6 @@
             $("body").css("background-color", color);
         }
     </script>
+    <p><a href="index.html">Return to main page</a></p>
 </body>
 </html>
