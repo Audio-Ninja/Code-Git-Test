@@ -3,9 +3,20 @@
     <body>
         <p id="first">My Name</p>
         <P id="second">About the Class</P>
+        <p id="math"></p>
+        <p id="mult"></p>
+        <p id="mod"></p>
+        <p id="sqrt"></p>
         <script>
+            let x = 5, y = 8;
+            let z = x + y;
             document.getElementById("first").innerHTML = "My name is Alma Stevens. I am 17 and a senior in Tech Trep High.";
             document.getElementById("second").innerHTML = "In Web Design 2, I learn to use coding languages like HTML, CSS, and Java to design my own websites."
+            document.getElementById("math").innerHTML = "x + y = z, z = " + z;
+            document.getElementById("mult").innerHTML = "y * z = " + y * z;
+            document.getElementById("mod").innerHTML = "z % x = " + z % x;
+            document.getElementById("sqrt").innerHTML = "The cube root of y is: " + Math.cbrt(y);
+
         </script>
     </body>
 </html>
