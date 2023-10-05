@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Number Guessing Game</h1>
+<p>Guess a number from 1-100, then hit the button. The game will tell you if you guessed correctly, or too high or low.</p>
+
+<input id="guess"/>
+<button id="button" onclick="document.getElementById('response').innerHTML = submitGuess()">Guess</button>
+<p id="response">Enter your Guess</p>
+<button id="reset" onclick="reset()">Reset</button>
+
+<script>
+    let randNumber = Math.floor(Math.random() * 100 + 1);
+    let answer = "";
+    let guesses = 0;
+    document.getElementById("reset").style.display = "none";
+
+    function submitGuess() {
+        let guess = Number(document.getElementById("guess").value);
+        answer = "Your guess is not a number."
+        guesses += 1;
+        if (guess > randNumber) {
+            answer = "You guessed too high."
+        } else if (guess < randNumber) {
+            answer = "You guessed too low."
+        } else if (guess == randNumber) {
+            answer = "You got it in " + guesses + " tries!"
+            document.getElementById("button").style.display = "none";
+            document.getElementById("reset").style.display = "inline";
+        }
+        return answer;
+    }
+    function reset() {
+        document.getElementById("button").style.display = "inline";
+        document.getElementById("reset").style.display = "none";
+        randNumber = Math.floor(Math.random() * 100 + 1);
+        guesses = 0;
+        document.getElementById('response').innerHTML = "Enter your Guess";
+    }
+</script>
+<p><a href="index.html">Return to main page</a></p>
+
+</body>
+</html>
