@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Number Add Loop</h1>
+
+<p>Each time you press "Add". it will add that number to a list. Entering -1 will print the sum of the numbers of the list and reset it.</p>
+
+<input id="number" value= 9 />
+
+<br>
+<br>
+
+<button onclick="document.getElementById('outcome').innerHTML = mathLoop()">Add</button>
+
+<p id="outcome"></p>
+
+<script>
+    var x = Number(document.getElementById("number").value);
+    var numbers = [];
+function mathLoop() {
+    var total = 0;
+    x = Number(document.getElementById("number").value);
+    if (x == -1) {
+        for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+        }         
+        numbers = [];
+    } else {
+        numbers.push(x);
+        total = "";
+    }
+    return total;
+}
+</script>
+<p><a href="index.html">Return to main page</a></p>
+
+</body>
+</html>
