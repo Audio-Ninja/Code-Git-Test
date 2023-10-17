@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            input {
+                width: 205px;
+            }
+            button {
+                width: 50px;
+                background-color: cornflowerblue;
+            }
+            .equals {
+                width: 104px;
+            }
+        </style>
+    </head>
 <body>
-
-<h1>Number Calculator</h1>
-
-<p>Input the numbers and choose an operation.</p>
-
-<input id="number1" value= 18 />
-<input id="number2" value= 67 />
-
-<br>
-<br>
-
-<button onclick="addNumbers()">Add</button>
-<button onclick="subNumbers()">Sub</button>
-<button onclick="multNumbers()">Mult</button>
-<button onclick="divNumbers()">Div</button>
-
-<p id="demo"></p>
+    <h1>Calculator</h1>
+    <input type="text" id="input" placeholder="0"/>
+    <br>
+    <button onclick="clr()">C</button>
+    <button onclick="del()">DEL</button>
+    <button onclick="calculate('%')">%</button>
+    <button onclick="calculate('/')">/</button>
+    <br>
+    <button onclick="calculate(7)">7</button>
+    <button onclick="calculate(8)">8</button>
+    <button onclick="calculate(9)">9</button>
+    <button onclick="calculate('*')">*</button>
+    <br>
+    <button onclick="calculate(4)">4</button>
+    <button onclick="calculate(5)">5</button>
+    <button onclick="calculate(6)">6</button>
+    <button onclick="calculate('-')">-</button>
+    <br>
+    <button onclick="calculate(1)">1</button>
+    <button onclick="calculate(2)">2</button>
+    <button onclick="calculate(3)">3</button>
+    <button onclick="calculate('+')">+</button>
+    <br>
+    <button onclick="calculate('.')">.</button>
+    <button onclick="calculate(0)">0</button>
+    <button class="equals" onclick="enter()">=</button>
 
 <script>
-function addNumbers() {
-    let x = document.getElementById("number1").value;
-    let y = document.getElementById("number2").value;
-    document.getElementById("demo").innerHTML = Number(x) + Number(y);
-}
-function subNumbers() {
-    let x = document.getElementById("number1").value;
-    let y = document.getElementById("number2").value;
-    document.getElementById("demo").innerHTML = Number(x) - Number(y);
-}
-function multNumbers() {
-    let x = document.getElementById("number1").value;
-    let y = document.getElementById("number2").value;
-    document.getElementById("demo").innerHTML = Number(x) * Number(y);
-}
-function divNumbers() {
-    let x = document.getElementById("number1").value;
-    let y = document.getElementById("number2").value;
-    document.getElementById("demo").innerHTML = Number(x) / Number(y);
-}
-</script>
+    let result = document.getElementById("input");
+
+    function calculate(number) {
+        result.value += number;
+    }
+    function enter() {
+        try {
+            result.value = eval(result.value);
+        }
+        catch(err) {
+            alert("Input is not valid");
+        }
+    }
+    function clr() {
+        result.value = "";
+    }
+    function del() {
+        result.value = result.value.slice(0,-1);
+    }
+</script> 
 <p><a href="index.html">Return to main page</a></p>
 
 </body>

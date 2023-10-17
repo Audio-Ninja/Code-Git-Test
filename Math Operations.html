@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Math Operations</h1>
+
+<p>Input the numbers and choose an operation.</p>
+
+<input id="number1" value= 18 />
+<input id="number2" value= 67 />
+
+<br>
+<br>
+
+<button onclick="addNumbers()">Add</button>
+<button onclick="subNumbers()">Sub</button>
+<button onclick="multNumbers()">Mult</button>
+<button onclick="divNumbers()">Div</button>
+
+<p id="demo"></p>
+
+<script>
+function addNumbers() {
+    let x = document.getElementById("number1").value;
+    let y = document.getElementById("number2").value;
+    document.getElementById("demo").innerHTML = Number(x) + Number(y);
+}
+function subNumbers() {
+    let x = document.getElementById("number1").value;
+    let y = document.getElementById("number2").value;
+    document.getElementById("demo").innerHTML = Number(x) - Number(y);
+}
+function multNumbers() {
+    let x = document.getElementById("number1").value;
+    let y = document.getElementById("number2").value;
+    document.getElementById("demo").innerHTML = Number(x) * Number(y);
+}
+function divNumbers() {
+    let x = document.getElementById("number1").value;
+    let y = document.getElementById("number2").value;
+    document.getElementById("demo").innerHTML = Number(x) / Number(y);
+}
+</script>
+<p><a href="index.html">Return to main page</a></p>
+
+</body>
+</html>
