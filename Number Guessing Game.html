@@ -34,7 +34,7 @@
     function reset() {
         document.getElementById("button").style.display = "inline";
         document.getElementById("reset").style.display = "none";
-        randNumber = Math.floor(Math.random() * 100 + 1);
+        randNumber = Math.floor(Math.random() * 100) + 1;
         guesses = 0;
         document.getElementById('response').innerHTML = "Enter your Guess";
     }
