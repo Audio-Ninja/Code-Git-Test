@@ -1,0 +1,30 @@
+body {
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: hsl(200, 70%, 15%);
+}
+button {
+    border-width: 1px;
+    color: rgb(255, 255, 255);
+    background-color: hsl(199, 94%, 13%);
+    border-color: white;
+}
+#themeButton {
+    position: absolute;
+    left: 300px;
+    top: 28px;
+}
+h1, p {
+    color: white;
+}
+input {
+    color: white;
+    background-color: hsl(200, 70%, 15%);
+    border-color: white;
+}
+a {
+    color: hsl(194, 89%, 43%);
+}
+a:hover {
+    color: white;
+}

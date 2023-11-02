@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        button {
-            border-width: 4px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="Light.css" id="style">
 </head>
 <body>
+    <button id="themeButton" onclick="changeTheme()">Light</button>
     <h1>Enter Your Name</h1>
- 
+
     <input id="name" type="text">
     <button type="button" onclick="EnterName()">Submit</button>
-    <p style="color:green" id="demo"></p>
- 
- 
+    <p id="demo"></p>
+
+    <p><a href="index.html">Return to main page</a></p>
+
     <script>
+        let theme = "Light"
         function EnterName() {
             let x = document.getElementById("name").value;
  
             document.getElementById("demo").innerHTML =
                 "Welcome to my site, " + x + "!";
         }
+        function changeTheme() {
+            if (theme == "Light") {
+                document.getElementById("themeButton").innerHTML = "Dark";
+                theme = "Dark";
+                style.href = 'Dark.css';
+            } else {
+                document.getElementById("themeButton").innerHTML = "Light";
+                theme = "Light";
+                style.href = 'Light.css'; 
+            }
+        }
     </script>
-    <p><a href="index.html">Return to main page</a></p>
 </body>
 </html>
